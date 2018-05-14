@@ -1,0 +1,10 @@
+{
+	"name": "Absio CM",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "This is the initial test version of the Absio CM",
+	"browser_action": {
+		"default_icon": "absioIcon.png",
+		"default_popup": "Login.html"
+	}
+}

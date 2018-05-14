@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Absio Login</title>
+<link href="Style.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.3.1.min.js"></script>
+<script type="application/javascript"></script>
+<script src="js-absio-secured-container-1.1.3/dist/browser/built.js"></script>
+<script src="script.js"></script>
+<script>
+  $(document).ready(function(){
+    window.securedContainer.initialize('https://sandbox.absio.com', '8a4d959c-90fa-49b8-a909-e8898eed9dc3')
+  })
+  function Register(){
+    if (txt_password == txt_pass_confirm){
+          const UserID = window.securedContainer.Register('txt_username'.val(),'txt_password'.val(),'txt_pass_phrase'.val(),'txt_reminder'.val())
+    }
+  }
+</script>
+</head>
+<body onload="onload()">
+    <div class="container">
+    <div class="wrapper" >
+        <div class="ani">
+          <div class="flex-container" >
+        <div class="box header">
+        	<img src="Images/absiowhitetextlogo.png" width="150"  alt="Absio Logo"/>
+
+        </div>
+        <div class="box sub-header">
+        	<label for = 'lbl_acc-registration-title'>Account Registration</label>
+        </div>
+        <div class="box lbl">
+        	<label for = 'lbl_username'>Username:</label>
+        </div>
+        <div class= "box input">
+        	<input type ="text" id ="txt_username">
+        	</div>
+        <div class="box lbl">
+        	<label for = 'lbl_password'>Password:</label>
+        </div>
+        <div class="box input">
+				<input type ="text" id ="txt_password">
+        </div>
+                <div class="box lbl">
+        	<label for = 'lbl_confirm_pass'>Password Confirm:</label>
+        </div>
+        <div class= "box input">
+        	<input type ="text" id ="txt_pass_confirm">
+        	</div>
+        <div class="box lbl">
+        	<label for = 'lbl_pass_phrase'>Pass Phrase:</label>
+        </div>
+        <div class="box input">
+				<input type ="text" id ="txt_pass_phrase">
+        </div>
+        <div class="box lbl">
+        	<label for = 'lbl_reminder'>Reminder:</label>
+        </div>
+        <div class="box input">
+				<input type ="text" id ="txt_reminder">
+        </div>
+                <div class="box submit">
+        	<form method="get" action="Account-Registration-personal.html">
+        		<button for = 'btn_continue'onclick = "Register()">Continue</button>
+        	</form>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
